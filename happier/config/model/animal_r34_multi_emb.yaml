@@ -1,0 +1,19 @@
+name: RetrievalNet
+freeze_batch_norm: False
+kwargs:
+  backbone_name: resnet34
+  norm_features: True
+  without_fc: False
+  normalize: False
+  with_autocast: True
+  pretrained: False
+  pooling: default
+  embed_dim: 513
+  dino_pretrain_path: dino_resnet34_animal
+  use_ema: True
+  ema_m: 0.9999
+  ema_m_increase: False
+  ema_start_epoch: null
+  ema_same_aug: True
+  use_sep: True
+  test_with_ema_net: True

@@ -1,0 +1,11 @@
+name: ClusterLoss_SingleEmb
+losses:
+  - name: ClusterLoss_SingleEmb
+    weight: 1
+    kwargs:
+      num_classes_level0: ${dataset.num_classes_train_level0}
+      num_classes_level1: ${dataset.num_classes_train_level1}
+      num_classes_level2: ${dataset.num_classes_train_level2}
+      embedding_size: ${model.kwargs.embed_dim}
+      data_dir: ${dataset.kwargs.data_dir}
+    optimizer: ${optimizer.opt.1}
